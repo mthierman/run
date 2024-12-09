@@ -1,4 +1,4 @@
-function Export-Commands
+function Export-Tasks
 {
     [ordered]@{
         debug_build   = {
