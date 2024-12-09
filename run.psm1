@@ -1,26 +1,24 @@
-function list
+function Export-Commands
 {
-    Get-ChildItem
-}
-
-function clean
-{
-    if (Test-Path "build")
-    {
-        Remove-Item "build" -Force -Recurse
+    [ordered]@{
+        list  = {
+            Get-ChildItem
+        }
+        clean = {
+            if (Test-Path "build")
+            {
+                Remove-Item "build" -Force -Recurse
+            }
+            else
+            {
+                Write-Host "Build directory not found" -ForegroundColor "Red"
+            }
+        }
+        run   = {
+            cargo run
+        }
+        r     = {
+            Get-ChildItem
+        }
     }
-    else
-    {
-        Write-Host "Build directory not found" -ForegroundColor "Red"
-    }
-}
-
-function run
-{
-    cargo run
-}
-
-function r
-{
-    Get-ChildItem
 }
