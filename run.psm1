@@ -17,8 +17,5 @@ function Export-Commands
         run   = {
             cargo run
         }
-        r     = {
-            Get-ChildItem
-        }
     }
 }
