@@ -1,10 +1,10 @@
 function Export-Commands
 {
     [ordered]@{
-        list  = {
+        list          = {
             Get-ChildItem
         }
-        clean = {
+        clean         = {
             if (Test-Path "build")
             {
                 Remove-Item "build" -Force -Recurse
@@ -14,8 +14,17 @@ function Export-Commands
                 Write-Host "Build directory not found" -ForegroundColor "Red"
             }
         }
-        run   = {
+        debug_build   = {
+            cargo build
+        }
+        debug_run     = {
             cargo run
+        }
+        release_build = {
+            cargo build --release
+        }
+        release_run   = {
+            cargo run --release
         }
     }
 }
