@@ -19,3 +19,8 @@ function run
 {
     cargo run
 }
+
+function r
+{
+    Get-ChildItem
+}
