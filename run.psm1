@@ -14,3 +14,8 @@ function clean
         Write-Host "Build directory not found" -ForegroundColor "Red"
     }
 }
+
+function run
+{
+    cargo run
+}
