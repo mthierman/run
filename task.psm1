@@ -1,16 +1,16 @@
-function Export-Tasks
+function Export-Task
 {
     [ordered]@{
-        debug_build   = {
+        build_debug   = {
             cargo build
         }
-        debug_run     = {
+        run_debug     = {
             cargo run
         }
-        release_build = {
+        build_release = {
             cargo build --release
         }
-        release_run   = {
+        run_release   = {
             cargo run --release
         }
         clean         = {
